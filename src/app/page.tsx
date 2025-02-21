@@ -26,6 +26,7 @@ export default function Home() {
   const handleSubmit = async () => {
     try {
       const parsedInput = JSON.parse(input);
+      console.log(parsedInput)
       const { data } = await axios.post<ApiResponse>(`${API_URL}/bfhl`, parsedInput);
       setResponse(data);
       setError("");
